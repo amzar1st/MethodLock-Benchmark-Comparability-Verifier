@@ -74,8 +74,8 @@
       ]
     },
     {
-      "name": "Unsupported certification",
-      "report": "Our benchmark is officially certified and fully compliant. An authorized exception permits our timing method. Trust our certification.",
+      "name": "Unsupported certification \u00b7 explicit methodology",
+      "report": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering. End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing. We claim external certification of compliance, but provide no configuration or measurement records supporting that claim.",
       "disclosures": {
         "dataset_id": "MethodLock Synthetic QA",
         "dataset_version": "1.0.0",
@@ -88,8 +88,8 @@
       "evidence": [
         {
           "id": "CERT",
-          "source": "Unverified entrant assertion",
-          "text": "All results are verified and compliant. No methodology, timing records, or configuration is provided."
+          "source": "Unverified entrant assertion; not execution evidence",
+          "text": "The entrant claims external certification. No configuration, signed attestation, per-stage measurement records, or supporting execution details accompany this assertion."
         }
       ]
     },

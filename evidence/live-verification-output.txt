@@ -1,0 +1,185 @@
+{
+  "source_matches": true,
+  "counts": {
+    "protocols": 2,
+    "runs": 6
+  },
+  "runs": [
+    {
+      "id": "1",
+      "name": "Compliant methodology",
+      "phase": "FINALIZED",
+      "outcome": "COMPARABLE"
+    },
+    {
+      "id": "2",
+      "name": "Omitted preprocessing",
+      "phase": "FINALIZED",
+      "outcome": "PROTOCOL_DEVIATION"
+    },
+    {
+      "id": "3",
+      "name": "Smaller dataset",
+      "phase": "FINALIZED",
+      "outcome": "PROTOCOL_DEVIATION"
+    },
+    {
+      "id": "4",
+      "name": "Unsupported certification",
+      "phase": "SUBMITTED",
+      "outcome": ""
+    },
+    {
+      "id": "5",
+      "name": "Missing execution evidence",
+      "phase": "FINALIZED",
+      "outcome": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "id": "6",
+      "name": "Unsupported certification · explicit methodology",
+      "phase": "FINALIZED",
+      "outcome": "INSUFFICIENT_EVIDENCE"
+    }
+  ],
+  "receipts": [
+    {
+      "method": "deploy",
+      "hash": "0x556934f2d87c6d14af5e530b9cbd172bf0b018d5ed97ae0a58f7cd9fff4f98b5",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "lock_protocol",
+      "hash": "0x0442a43c35b246df44d874c3c29a6fd6cb5bb8a6b2c46bd40a87b2250176dae3",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "submit_run",
+      "hash": "0x796d8d554f58c1d5d746f6f70086462cf21749894ec2f18fb26b1d3f5aa603e2",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "submit_run",
+      "hash": "0x62f51e6efa998deec4c3f5e6a3c5d0274225e79bd9e3ce9721dd03cb835e0a59",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "assess_methodology",
+      "hash": "0x6d428f686a03dcd130adf767bb14cb00c516e59babba28bbb85328127c561d56",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "assess_methodology",
+      "hash": "0x7577af708189eca4cad1ae3d0c1b5ffb27026b3088889b194f17850cc34afe4b",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "finalize_result",
+      "hash": "0x2ce67327bde2da871f6feab771565e5eee831be1b461936b4bb64da038967a52",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "finalize_result",
+      "hash": "0x3943e93c9ef2523ec99ab691a5f333f00e43d909a8ba57b72066b3e57e9b2934",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "submit_run",
+      "hash": "0xf8fc35fc1aa1abae63c44233c8e0d9bf7687b7c24c3a42042d9cc37c55e724d5",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "assess_methodology",
+      "hash": "0x981113f19511553c121f0330df0e899b563518cff83593fac296bf053e09c816",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "submit_run",
+      "hash": "0x8e793221da8420c26552affda213d9cfb00d3d8dbc17de434c5a31d9687c04e3",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "submit_run",
+      "hash": "0x6dcefc507c723ec8260f2a8afc8ece58c616bf889a0329002c3bda6f9e3bcbc2",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "assess_methodology",
+      "hash": "0x9a0a9d61ff067b7cbf1c49fb81728b7f205c111cdd0b7d39a225c8d51cda41e5",
+      "status": "FINALIZED",
+      "success": false
+    },
+    {
+      "method": "assess_methodology",
+      "hash": "0x0860344e5ae39c993110a92d3b46a897ddaa2d4ee1b8487fe3cf81f160c43d57",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "finalize_result",
+      "hash": "0x7cc79962cb62c19621b8866c61a26c09d471e8f7baf02e738dc06cb81087e93b",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "submit_run (intentional invalid report)",
+      "hash": "0xae70c17490ba1e2b6180d151114305ae516a942815b1ae598075a9e4f4b535ac",
+      "status": "FINALIZED",
+      "success": false
+    },
+    {
+      "method": "lock_protocol",
+      "hash": "0xec3a9d130916e8b9a97ebffa1dc203278ea930d4de3e4c8aa887b095918d17a1",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "finalize_result (rejected: no approved assessment)",
+      "hash": "0xc5d9ae8a3674fbcca4be60b7e2df4fcd9c6d151298a20cd7a8db6d9ce16f9e59",
+      "status": "FINALIZED",
+      "success": false
+    },
+    {
+      "method": "assess_methodology (rejected retry)",
+      "hash": "0x608d2782b969cd807f45c9e9b29c6051b7548a9ce07329af8aabf80bc913c614",
+      "status": "FINALIZED",
+      "success": false
+    },
+    {
+      "method": "finalize_result",
+      "hash": "0x178b1091f35a726e6b4e815b69f39d3fff90079c77cc73695c381d432c4105ae",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "submit_run",
+      "hash": "0xdeecad456c50fb9e0647ac765948822336c631fac792cb864473fc76cac24f9d",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "assess_methodology",
+      "hash": "0xf6b2f5fd9412a54b2807326a02c2a4c007b38e0f16288ae0e3b6bdae4e5e0b5a",
+      "status": "FINALIZED",
+      "success": true
+    },
+    {
+      "method": "finalize_result",
+      "hash": "0x513cfd23a0c29edd17881b92cea95a690e2a2804d6067eb7f041ceb5d17e9f6e",
+      "status": "FINALIZED",
+      "success": true
+    }
+  ]
+}

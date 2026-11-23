@@ -43,7 +43,7 @@ npm run dev
 
 The Python suite uses the official `genlayer-test` direct runner, pinned to GenVM `v0.2.12` for the contract’s SDK dependency. The test runner downloads and caches official GenVM artifacts on first run. `pytest.ini` disables the integration plugin’s automatic local RPC setup; the direct plugin remains enabled. LLM outputs are mocked in unit tests; they do not prove network consensus. Network evidence is recorded separately.
 
-`npm test` runs 11 frontend lifecycle/ranking/security tests and 25 direct contract tests. `node scripts/verify-live.mjs` reads current deployed source/state and known receipts without sending transactions. `public/fixtures.json` contains the five synthetic cases; these are not measurements of real model performance.
+`npm test` runs 18 frontend lifecycle/ranking/security tests and 25 direct contract tests. `node scripts/verify-live.mjs` reads current deployed source/state and known receipts without sending transactions. `public/fixtures.json` contains the five synthetic cases; these are not measurements of real model performance.
 
 ## Repository
 
@@ -63,7 +63,7 @@ The Python suite uses the official `genlayer-test` direct runner, pinned to GenV
 
 This is a working development-network MVP, not a production benchmark certification authority. Committed snapshots prevent later edits, but entrants can fabricate documents. Neither a source label nor consensus authenticates a log or proves a run occurred. Actual execution proof needs runner attestations, signed artifacts, dataset digests, and independent replay. No real-world facts are inferred from live websites; the organizer’s locked protocol is authoritative for this comparison, and evidence is the exact text committed on chain.
 
-The semantic model can still be wrong or disagree. Unsupported evidence remains unknown; failed consensus never becomes a comparable record. There is no privileged override, mutable protocol, resubmission-in-place, payout, automatic external fetch, or proof of hardware identity. Data is public; submit no secrets. Current assessments are immutable after success; corrections require a new run. See the architecture document for the adoption path and bounded-storage assumptions.
+The semantic model can still be wrong or disagree. Unsupported evidence remains unknown; failed consensus never becomes a comparable record. There is no privileged override, mutable protocol, resubmission-in-place, payout, automatic external fetch, or proof of hardware identity. Data is public; submit no secrets. Strict per-requirement consensus can reject ambiguous reports; rejected assessments leave the run submitted and ineligible. Current assessments are immutable after success; corrections require a new run. See the architecture document for the adoption path and bounded-storage assumptions.
 
 ## Official references
 
@@ -75,3 +75,9 @@ The semantic model can still be wrong or disagree. Unsupported evidence remains 
 The application targets stable Studionet with `genlayer-js@1.1.8`. It deliberately does not mix Studio-dev’s v0.6 preview fee API or chain ID with the stable deployment.
 
 MIT licensed. See [LICENSE](LICENSE).
+
+## Screenshots
+
+![MethodLock live workspace](evidence/screenshots/dashboard.jpg)
+
+![Verified transaction failure handling](evidence/screenshots/transaction-failures.jpg)

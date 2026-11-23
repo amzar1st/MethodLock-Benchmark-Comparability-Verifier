@@ -43,7 +43,8 @@ def test_five_cases(c,direct_vm,index,expected):
     if index==2:
         findings=rows(r)
     if index==3:
-        for f in findings: f.update(status='UNKNOWN',code='CLAIM_UNSUPPORTED',evidence_id='',quote='')
+        findings=rows(r)
+        findings[2].update(status='UNKNOWN',code='CLAIM_UNSUPPORTED',evidence_id='',quote='')
     if index==4: findings[2].update(status='UNKNOWN',code='EVIDENCE_MISSING',evidence_id='',quote='')
     mock(direct_vm,findings); c.assess_methodology(rid); c.finalize_result(rid)
     assert json.loads(c.get_run(rid))['outcome']==expected

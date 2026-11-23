@@ -75,3 +75,11 @@ Any `DEVIATION` -> `PROTOCOL_DEVIATION`; otherwise any `UNKNOWN` -> `INSUFFICIEN
 ## Continued development
 
 Start with a DAO inference challenge that publishes signed runner reports. Add complete dataset content hashes, signed timing traces, runner identity/attestation, auditable independent replay, reviewer challenges with new evidence, and an indexer for global ranking. Assess disagreement rates and injection resilience on adversarial packets before any production certification or financial settlement use.
+
+## SDK verification details
+
+Reads pass `TransactionHashVariant.LATEST_FINAL` to the SDK. An older `stateStatus` option is ignored by the installed SDK and must not be used. Regression tests assert the actual read parameters. Transaction success additionally requires an approved consensus result (`MAJORITY_AGREE`, legacy result 6) plus successful leader execution; a finalized rejected proposal can still contain a leader `SUCCESS` receipt. Result 7 and execution rollback are both failures. Existing hashes can be tracked from the Transactions page without a signer, after verifying the transaction targets this MethodLock instance.
+
+The protocol browser loads the recent ten protocols and protocols referenced by the current run page; older protocols can be loaded by ID. A newly locked protocol is discoverable before its first submission. These cases are regression tested.
+
+Strict per-requirement consensus can fail on ambiguous inputs even when the overall likely outcome is insufficient evidence. An unapproved assessment leaves its run submitted and ineligible. The original vague-certification run demonstrates this limitation. A separately committed clarified packet supplies explicit methodology while leaving execution certification unsupported. No failed assessment is converted to a verdict by the frontend or organizer.

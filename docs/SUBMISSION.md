@@ -30,7 +30,7 @@ A numeric script cannot establish whether “inference time” covers preprocess
 
 ## Validation and limitations
 
-See `docs/VERIFICATION.md` and machine-readable artifacts in `evidence/`. Automated coverage includes 25 contract tests and 11 lifecycle/ranking/rendering tests. The project targets Studionet development infrastructure, which may reset. It does not authenticate self-reported logs, certify real model performance, hold funds, or make payouts.
+See `docs/VERIFICATION.md` and machine-readable artifacts in `evidence/`. Automated coverage includes 25 contract tests and 18 lifecycle/ranking/rendering tests. The project targets Studionet development infrastructure, which may reset. It does not authenticate self-reported logs, certify real model performance, hold funds, or make payouts.
 
 ## Suggested review walkthrough
 
@@ -44,3 +44,19 @@ See `docs/VERIFICATION.md` and machine-readable artifacts in `evidence/`. Automa
 ## Continued development
 
 Signed runner manifests, immutable dataset digests, independent replay, challenge evidence, and an indexed global leaderboard would extend this primitive into a practical competition submission gate.
+
+## Verified demonstration and submission assets
+
+Five reference scenarios are finalized: run 1 comparable; runs 2 and 3 protocol deviations; runs 5 and 6 insufficient evidence. Run 4 is an additional ambiguous packet retained as a rejected-consensus demonstration. Its failed assessment and retry left it ineligible; a premature finalization reverted. No prior submission was edited.
+
+The final read-only verification checked 23 transactions (19 successful and four expected negative cases), and matched deployed source byte-for-byte. Website reads explicitly select finalized state. The public browser flow verified creation of a session test account, test-token funding, protocol locking, submission, assessment, finalization, interrupted tracking recovery, rollback reporting, and tracking a Studio-origin consensus rejection.
+
+- Logo for upload: `docs/assets/methodlock-logo.png` (512 × 512 PNG).
+- Screenshots: `evidence/screenshots/dashboard.jpg`, `evidence/screenshots/transaction-failures.jpg`.
+- Machine-readable evidence and exact transaction links: `evidence/live-verification.json`.
+- Browser-exported run records: `evidence/browser-export.json`.
+- Full verification and limitations: `docs/VERIFICATION.md`.
+
+Suggested short summary: **MethodLock checks benchmark reports against immutable evaluation protocols using deterministic numeric checks and independent GenLayer methodology review, preventing incomparable results from entering a leaderboard.**
+
+This is a Studionet development-network MVP. The synthetic demonstrations establish reported compliance, not authentic execution or certified model performance. Studio's built-in account deployed the contract; direct website writes use a separate session-only test signer because Studio does not expose a cross-origin signing bridge.

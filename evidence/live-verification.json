@@ -1,0 +1,1166 @@
+{
+  "checked_at": "2026-11-23T13:39:58.970Z",
+  "network": {
+    "name": "MethodLock",
+    "network": "GenLayer Studionet",
+    "chainId": 61999,
+    "rpc": "https://studio.genlayer.com/api",
+    "studio": "https://studio.genlayer.com",
+    "explorer": "https://explorer-studio.genlayer.com",
+    "address": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+    "deploymentTransaction": "0x556934f2d87c6d14af5e530b9cbd172bf0b018d5ed97ae0a58f7cd9fff4f98b5",
+    "deployer": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C"
+  },
+  "source_sha256": "940284e1764f07985a4133699447f9d344fc0100e7b7cb304ccf44cd7e107660",
+  "source_matches_deployment": true,
+  "counts": {
+    "protocols": 2,
+    "runs": 6
+  },
+  "protocols": [
+    {
+      "hash": "6cb7c10d47cc776e77c2cfcee8da78584ec32086f8a61587590b79cf380c63ca",
+      "id": "1",
+      "owner": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "protocol": {
+        "batch_size": 1,
+        "dataset_id": "MethodLock Synthetic QA",
+        "dataset_samples": 1000,
+        "dataset_version": "1.0.0",
+        "execution_evidence": "Provide a configuration and measurement excerpt disclosing dataset version and count, batch size, hardware, quality metric and score, and preprocessing, inference and postprocessing timings.",
+        "min_quality_bps": 9000,
+        "quality_method": "Case-sensitive exact match against all 1000 reference answers; no filtering.",
+        "quality_metric": "exact_match",
+        "sample_tolerance": 0,
+        "timing_scope": "End-to-end wall-clock latency per request including preprocessing, model inference, and postprocessing. Report median in microseconds.",
+        "title": "Inference Integrity / v1"
+      }
+    },
+    {
+      "hash": "6cb7c10d47cc776e77c2cfcee8da78584ec32086f8a61587590b79cf380c63ca",
+      "id": "2",
+      "owner": "0xFD73C765CCDCEb1B3c7b8F56fE6b4C0d9248758e",
+      "protocol": {
+        "batch_size": 1,
+        "dataset_id": "MethodLock Synthetic QA",
+        "dataset_samples": 1000,
+        "dataset_version": "1.0.0",
+        "execution_evidence": "Provide a configuration and measurement excerpt disclosing dataset version and count, batch size, hardware, quality metric and score, and preprocessing, inference and postprocessing timings.",
+        "min_quality_bps": 9000,
+        "quality_method": "Case-sensitive exact match against all 1000 reference answers; no filtering.",
+        "quality_metric": "exact_match",
+        "sample_tolerance": 0,
+        "timing_scope": "End-to-end wall-clock latency per request including preprocessing, model inference, and postprocessing. Report median in microseconds.",
+        "title": "Inference Integrity / v1"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "commitment": "b0cbd4f5a5814e3ee19ded2ccc958530f674a9d497c5dde718184395670b6af2",
+      "entrant": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "findings": [
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"MethodLock Synthetic QA\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_ID",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"1.0.0\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_VERSION",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_SAMPLES",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "BATCH_SIZE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "9300",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "QUALITY_BPS",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "12000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "LATENCY_US",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"NVIDIA A100 80GB\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "HARDWARE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "REPORT",
+          "quote": "End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing.",
+          "reason": "The report explicitly includes all three required stages in end-to-end wall-clock median latency. CONFIG_LOG supplies the median in microseconds, consistent with the disclosed 12000 us.",
+          "requirement_id": "TIMING",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "REPORT",
+          "quote": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering.",
+          "reason": "The described evaluation matches the required exact_match metric and method: case-sensitive comparison against all 1000 reference answers without filtering.",
+          "requirement_id": "QUALITY_METHOD",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "CONFIG_LOG",
+          "quote": "Dataset: MethodLock Synthetic QA version 1.0.0, 1000 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 930/1000 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, end-to-end 12000 us.",
+          "reason": "The attached excerpt provides the required configuration, quality metric and score, and per-stage measurements. Dataset identity, version and count, batch size, hardware, quality, and latency agree with the report and numeric disclosures. The stage timings sum to the reported end-to-end latency, and quality exceeds the 9000 bps minimum. This establishes reported compliance only: the item is identified as a synthetic fixture, not independently attested execution.",
+          "requirement_id": "EXECUTION_EVIDENCE",
+          "status": "SATISFIED"
+        }
+      ],
+      "id": "1",
+      "outcome": "COMPARABLE",
+      "phase": "FINALIZED",
+      "protocol_hash": "6cb7c10d47cc776e77c2cfcee8da78584ec32086f8a61587590b79cf380c63ca",
+      "protocol_id": "1",
+      "run": {
+        "disclosures": {
+          "batch_size": 1,
+          "dataset_id": "MethodLock Synthetic QA",
+          "dataset_samples": 1000,
+          "dataset_version": "1.0.0",
+          "hardware": "NVIDIA A100 80GB",
+          "latency_us": 12000,
+          "quality_bps": 9300
+        },
+        "evidence": [
+          {
+            "id": "CONFIG_LOG",
+            "source": "Synthetic fixture authored for MethodLock; not an independently attested execution.",
+            "text": "Dataset: MethodLock Synthetic QA version 1.0.0, 1000 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 930/1000 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, end-to-end 12000 us."
+          }
+        ],
+        "name": "Compliant methodology",
+        "report": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering. End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing. See CONFIG_LOG for settings and per-stage timings."
+      }
+    },
+    {
+      "commitment": "34493008af89af4e322eecbec7f5a2619aceb6af1e973c0b523ed47064b0abee",
+      "entrant": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "findings": [
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"MethodLock Synthetic QA\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_ID",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"1.0.0\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_VERSION",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_SAMPLES",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "BATCH_SIZE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "9300",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "QUALITY_BPS",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "9000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "LATENCY_US",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"NVIDIA A100 80GB\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "HARDWARE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "TIMING_EXCLUSION",
+          "evidence_id": "REPORT",
+          "quote": "Latency measures model inference only and explicitly excludes preprocessing and postprocessing.",
+          "reason": "The protocol requires reporting end-to-end wall‑clock latency including preprocessing, inference, and postprocessing. The report explicitly states that preprocessing and postprocessing are excluded, which is a stated omission and therefore a timing scope deviation.",
+          "requirement_id": "TIMING",
+          "status": "DEVIATION"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "REPORT",
+          "quote": "Quality evaluation uses case-sensitive exact match against all 1000 reference answers with no filtering.",
+          "reason": "The locked protocol specifies a case‑sensitive exact‑match quality method with no filtering. The report’s description matches this specification exactly, providing clear supported inclusion.",
+          "requirement_id": "QUALITY_METHOD",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "CONFIG_LOG",
+          "quote": "Dataset: MethodLock Synthetic QA version 1.0.0, 1000 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 930/1000 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, reported latency 9000 us excludes preprocessing and postprocessing.",
+          "reason": "The attached CONFIG_LOG evidence provides the required configuration details (dataset version and count, batch size, hardware, quality metric and score) and per‑stage timing measurements. These details agree with the disclosures and the report, satisfying the execution_evidence requirement.",
+          "requirement_id": "EXECUTION_EVIDENCE",
+          "status": "SATISFIED"
+        }
+      ],
+      "id": "2",
+      "outcome": "PROTOCOL_DEVIATION",
+      "phase": "FINALIZED",
+      "protocol_hash": "6cb7c10d47cc776e77c2cfcee8da78584ec32086f8a61587590b79cf380c63ca",
+      "protocol_id": "1",
+      "run": {
+        "disclosures": {
+          "batch_size": 1,
+          "dataset_id": "MethodLock Synthetic QA",
+          "dataset_samples": 1000,
+          "dataset_version": "1.0.0",
+          "hardware": "NVIDIA A100 80GB",
+          "latency_us": 9000,
+          "quality_bps": 9300
+        },
+        "evidence": [
+          {
+            "id": "CONFIG_LOG",
+            "source": "Synthetic fixture authored for MethodLock; not an independently attested execution.",
+            "text": "Dataset: MethodLock Synthetic QA version 1.0.0, 1000 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 930/1000 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, reported latency 9000 us excludes preprocessing and postprocessing."
+          }
+        ],
+        "name": "Omitted preprocessing",
+        "report": "Latency measures model inference only and explicitly excludes preprocessing and postprocessing. Quality evaluation uses case-sensitive exact match against all 1000 reference answers with no filtering."
+      }
+    },
+    {
+      "commitment": "8816abbe0134f220e0f2a637dd836ba67d43b2fb8f35ec2888543d36c2e47979",
+      "entrant": "0xaFf502f59a98626188884717F98a3a75dE61859A",
+      "findings": [
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"MethodLock Synthetic QA\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_ID",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"1.0.0\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_VERSION",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "OUTSIDE_TOLERANCE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "500",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_SAMPLES",
+          "status": "DEVIATION"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "BATCH_SIZE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "9300",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "QUALITY_BPS",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "12000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "LATENCY_US",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"NVIDIA A100 80GB\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "HARDWARE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "REPORT",
+          "quote": "End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing.",
+          "reason": "The report explicitly includes every required stage in end-to-end wall-clock median latency. CONFIG_LOG reports the median in microseconds.",
+          "requirement_id": "TIMING",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "QUALITY_METHOD_MISMATCH",
+          "evidence_id": "REPORT",
+          "quote": "We evaluated all 500 reference answers using case-sensitive exact match with no filtering.",
+          "reason": "The protocol requires case-sensitive exact match against all 1000 reference answers with no filtering. The report explicitly evaluates only 500 answers, matching the attached evidence and numeric disclosures but contradicting the required evaluation population.",
+          "requirement_id": "QUALITY_METHOD",
+          "status": "DEVIATION"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "CONFIG_LOG",
+          "quote": "Dataset: MethodLock Synthetic QA version 1.0.0, 500 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 465/500 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, end-to-end 12000 us.",
+          "reason": "The attached item provides the required configuration and per-stage measurement details and agrees with the report and numeric disclosures on dataset, sample count, batch size, hardware, quality, and latency. The 500-sample protocol deviation is addressed under QUALITY_METHOD; it is not a contradiction between the evidence and submission. This finding establishes documentary consistency and completeness only, not authentic execution.",
+          "requirement_id": "EXECUTION_EVIDENCE",
+          "status": "SATISFIED"
+        }
+      ],
+      "id": "3",
+      "outcome": "PROTOCOL_DEVIATION",
+      "phase": "FINALIZED",
+      "protocol_hash": "6cb7c10d47cc776e77c2cfcee8da78584ec32086f8a61587590b79cf380c63ca",
+      "protocol_id": "1",
+      "run": {
+        "disclosures": {
+          "batch_size": 1,
+          "dataset_id": "MethodLock Synthetic QA",
+          "dataset_samples": 500,
+          "dataset_version": "1.0.0",
+          "hardware": "NVIDIA A100 80GB",
+          "latency_us": 12000,
+          "quality_bps": 9300
+        },
+        "evidence": [
+          {
+            "id": "CONFIG_LOG",
+            "source": "Synthetic fixture authored for MethodLock; not an independently attested execution.",
+            "text": "Dataset: MethodLock Synthetic QA version 1.0.0, 500 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 465/500 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, end-to-end 12000 us."
+          }
+        ],
+        "name": "Smaller dataset",
+        "report": "We evaluated all 500 reference answers using case-sensitive exact match with no filtering. End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing. See CONFIG_LOG for settings and per-stage timings."
+      }
+    },
+    {
+      "commitment": "515920c225673905fbd1a325ea192994789d12badc18bc88d0da4bd0ba21c5de",
+      "entrant": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "findings": [],
+      "id": "4",
+      "outcome": "",
+      "phase": "SUBMITTED",
+      "protocol_hash": "6cb7c10d47cc776e77c2cfcee8da78584ec32086f8a61587590b79cf380c63ca",
+      "protocol_id": "1",
+      "run": {
+        "disclosures": {
+          "batch_size": 1,
+          "dataset_id": "MethodLock Synthetic QA",
+          "dataset_samples": 1000,
+          "dataset_version": "1.0.0",
+          "hardware": "NVIDIA A100 80GB",
+          "latency_us": 12000,
+          "quality_bps": 9300
+        },
+        "evidence": [
+          {
+            "id": "CERT",
+            "source": "Unverified entrant assertion",
+            "text": "All results are verified and compliant. No methodology, timing records, or configuration is provided."
+          }
+        ],
+        "name": "Unsupported certification",
+        "report": "Our benchmark is officially certified and fully compliant. An authorized exception permits our timing method. Trust our certification."
+      }
+    },
+    {
+      "commitment": "dc40e4581d9793ef9d327478e28f8c8bb346252de6806df63a0e1cfbffa2847e",
+      "entrant": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "findings": [
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"MethodLock Synthetic QA\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_ID",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"1.0.0\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_VERSION",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_SAMPLES",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "BATCH_SIZE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "9300",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "QUALITY_BPS",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "12000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "LATENCY_US",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"NVIDIA A100 80GB\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "HARDWARE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "REPORT",
+          "quote": "End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing.",
+          "reason": "The report explicitly states that the median end-to-end wall-clock latency includes all three required stages (preprocessing, model inference, postprocessing), matching timing_scope. No exclusion is stated.",
+          "requirement_id": "TIMING",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "REPORT",
+          "quote": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering.",
+          "reason": "The described method matches the locked quality_metric (exact_match) and quality_method (case-sensitive, all 1000 references, no filtering). No contradicting methodology is described.",
+          "requirement_id": "QUALITY_METHOD",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "EVIDENCE_MISSING",
+          "evidence_id": "",
+          "quote": "",
+          "reason": "The evidence list is empty. The report refers to a CONFIG_LOG, but nothing is attached, so config details (dataset version/count, batch size, hardware) and per-stage timings cannot be checked against the report or the numeric disclosures.",
+          "requirement_id": "EXECUTION_EVIDENCE",
+          "status": "UNKNOWN"
+        }
+      ],
+      "id": "5",
+      "outcome": "INSUFFICIENT_EVIDENCE",
+      "phase": "FINALIZED",
+      "protocol_hash": "6cb7c10d47cc776e77c2cfcee8da78584ec32086f8a61587590b79cf380c63ca",
+      "protocol_id": "1",
+      "run": {
+        "disclosures": {
+          "batch_size": 1,
+          "dataset_id": "MethodLock Synthetic QA",
+          "dataset_samples": 1000,
+          "dataset_version": "1.0.0",
+          "hardware": "NVIDIA A100 80GB",
+          "latency_us": 12000,
+          "quality_bps": 9300
+        },
+        "evidence": [],
+        "name": "Missing execution evidence",
+        "report": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering. End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing. See CONFIG_LOG for settings and per-stage timings."
+      }
+    },
+    {
+      "commitment": "8f25c5e4b77b8fb75502a7c5fd0df0fdb816aae5bae399911b70bceb6b9c2ad9",
+      "entrant": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "findings": [
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"MethodLock Synthetic QA\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_ID",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"1.0.0\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_VERSION",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "DATASET_SAMPLES",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "1",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "BATCH_SIZE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "9300",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "QUALITY_BPS",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "12000",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "LATENCY_US",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "DISCLOSURES",
+          "quote": "\"NVIDIA A100 80GB\"",
+          "reason": "Checked committed disclosure against the locked protocol.",
+          "requirement_id": "HARDWARE",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "REPORT",
+          "quote": "End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing.",
+          "reason": "The report explicitly states end-to-end wall-clock median latency and names all three required stages: preprocessing, model inference, and postprocessing. This is a clear supported inclusion under timing_scope.",
+          "requirement_id": "TIMING",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "NONE",
+          "evidence_id": "REPORT",
+          "quote": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering.",
+          "reason": "The described evaluation matches exact_match and the locked method: case-sensitive exact match against all 1000 reference answers with no filtering. The disclosure also reports quality_bps 9300, above the 9000 minimum.",
+          "requirement_id": "QUALITY_METHOD",
+          "status": "SATISFIED"
+        },
+        {
+          "code": "CLAIM_UNSUPPORTED",
+          "evidence_id": "",
+          "quote": "",
+          "reason": "The only attached evidence item is CERT, an unverified entrant assertion explicitly lacking configuration, signed attestation, per-stage measurement records, or supporting execution details. No attached item supplies the required configuration and per-stage measurement excerpt,",
+          "requirement_id": "EXECUTION_EVIDENCE",
+          "status": "UNKNOWN"
+        }
+      ],
+      "id": "6",
+      "outcome": "INSUFFICIENT_EVIDENCE",
+      "phase": "FINALIZED",
+      "protocol_hash": "6cb7c10d47cc776e77c2cfcee8da78584ec32086f8a61587590b79cf380c63ca",
+      "protocol_id": "1",
+      "run": {
+        "disclosures": {
+          "batch_size": 1,
+          "dataset_id": "MethodLock Synthetic QA",
+          "dataset_samples": 1000,
+          "dataset_version": "1.0.0",
+          "hardware": "NVIDIA A100 80GB",
+          "latency_us": 12000,
+          "quality_bps": 9300
+        },
+        "evidence": [
+          {
+            "id": "CERT",
+            "source": "Unverified entrant assertion; not execution evidence",
+            "text": "The entrant claims external certification. No configuration, signed attestation, per-stage measurement records, or supporting execution details accompany this assertion."
+          }
+        ],
+        "name": "Unsupported certification · explicit methodology",
+        "report": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering. End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing. We claim external certification of compliance, but provide no configuration or measurement records supporting that claim."
+      }
+    }
+  ],
+  "receipts": [
+    {
+      "method": "deploy",
+      "hash": "0x556934f2d87c6d14af5e530b9cbd172bf0b018d5ed97ae0a58f7cd9fff4f98b5",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    {
+      "method": "lock_protocol",
+      "hash": "0x0442a43c35b246df44d874c3c29a6fd6cb5bb8a6b2c46bd40a87b2250176dae3",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    {
+      "method": "submit_run",
+      "run_id": "1",
+      "hash": "0x796d8d554f58c1d5d746f6f70086462cf21749894ec2f18fb26b1d3f5aa603e2",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "submit_run",
+      "run_id": "2",
+      "hash": "0x62f51e6efa998deec4c3f5e6a3c5d0274225e79bd9e3ce9721dd03cb835e0a59",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    {
+      "method": "assess_methodology",
+      "run_id": "1",
+      "hash": "0x6d428f686a03dcd130adf767bb14cb00c516e59babba28bbb85328127c561d56",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "1",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    {
+      "method": "assess_methodology",
+      "run_id": "2",
+      "hash": "0x7577af708189eca4cad1ae3d0c1b5ffb27026b3088889b194f17850cc34afe4b",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "finalize_result",
+      "run_id": "1",
+      "hash": "0x2ce67327bde2da871f6feab771565e5eee831be1b461936b4bb64da038967a52",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "finalize_result",
+      "run_id": "2",
+      "hash": "0x3943e93c9ef2523ec99ab691a5f333f00e43d909a8ba57b72066b3e57e9b2934",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "submit_run",
+      "run_id": "3",
+      "hash": "0xf8fc35fc1aa1abae63c44233c8e0d9bf7687b7c24c3a42042d9cc37c55e724d5",
+      "account": "Frontend session signer",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xaFf502f59a98626188884717F98a3a75dE61859A",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "assess_methodology",
+      "run_id": "3",
+      "hash": "0x981113f19511553c121f0330df0e899b563518cff83593fac296bf053e09c816",
+      "account": "Frontend session signer",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xaFf502f59a98626188884717F98a3a75dE61859A",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "2",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "DISAGREE"
+      ]
+    },
+    {
+      "method": "submit_run",
+      "run_id": "4",
+      "hash": "0x8e793221da8420c26552affda213d9cfb00d3d8dbc17de434c5a31d9687c04e3",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "submit_run",
+      "run_id": "5",
+      "hash": "0x6dcefc507c723ec8260f2a8afc8ece58c616bf889a0329002c3bda6f9e3bcbc2",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "assess_methodology",
+      "run_id": "4",
+      "hash": "0x9a0a9d61ff067b7cbf1c49fb81728b7f205c111cdd0b7d39a225c8d51cda41e5",
+      "account": "Studio built-in",
+      "expected_success": false,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": false,
+      "error": "Consensus rejected the proposed result; no contract update was applied.",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 7,
+      "round": "3",
+      "votes": [
+        "AGREE",
+        "DISAGREE",
+        "IDLE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    },
+    {
+      "method": "assess_methodology",
+      "run_id": "5",
+      "hash": "0x0860344e5ae39c993110a92d3b46a897ddaa2d4ee1b8487fe3cf81f160c43d57",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "1",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "finalize_result",
+      "run_id": "3",
+      "hash": "0x7cc79962cb62c19621b8866c61a26c09d471e8f7baf02e738dc06cb81087e93b",
+      "account": "Frontend session signer",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xFD73C765CCDCEb1B3c7b8F56fE6b4C0d9248758e",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "submit_run (intentional invalid report)",
+      "hash": "0xae70c17490ba1e2b6180d151114305ae516a942815b1ae598075a9e4f4b535ac",
+      "account": "Frontend session signer",
+      "expected_success": false,
+      "run_id": "1",
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": false,
+      "error": "Methodology report required",
+      "from": "0xFD73C765CCDCEb1B3c7b8F56fE6b4C0d9248758e",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "lock_protocol",
+      "protocol_id": "2",
+      "hash": "0xec3a9d130916e8b9a97ebffa1dc203278ea930d4de3e4c8aa887b095918d17a1",
+      "account": "Frontend session signer",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xFD73C765CCDCEb1B3c7b8F56fE6b4C0d9248758e",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    {
+      "method": "finalize_result (rejected: no approved assessment)",
+      "run_id": "4",
+      "hash": "0xc5d9ae8a3674fbcca4be60b7e2df4fcd9c6d151298a20cd7a8db6d9ce16f9e59",
+      "account": "Studio built-in",
+      "expected_success": false,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": false,
+      "error": "Assessment required before finalization",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    {
+      "method": "assess_methodology (rejected retry)",
+      "run_id": "4",
+      "hash": "0x608d2782b969cd807f45c9e9b29c6051b7548a9ce07329af8aabf80bc913c614",
+      "account": "Studio built-in",
+      "expected_success": false,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": false,
+      "error": "Consensus rejected the proposed result; no contract update was applied.",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 7,
+      "round": "3",
+      "votes": [
+        "DISAGREE",
+        "IDLE",
+        "IDLE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    },
+    {
+      "method": "finalize_result",
+      "run_id": "5",
+      "hash": "0x178b1091f35a726e6b4e815b69f39d3fff90079c77cc73695c381d432c4105ae",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "submit_run",
+      "run_id": "6",
+      "hash": "0xdeecad456c50fb9e0647ac765948822336c631fac792cb864473fc76cac24f9d",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "method": "assess_methodology",
+      "run_id": "6",
+      "hash": "0xf6b2f5fd9412a54b2807326a02c2a4c007b38e0f16288ae0e3b6bdae4e5e0b5a",
+      "account": "Studio built-in",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    {
+      "hash": "0x513cfd23a0c29edd17881b92cea95a690e2a2804d6067eb7f041ceb5d17e9f6e",
+      "method": "finalize_result",
+      "run_id": "6",
+      "expected_success": true,
+      "terminal": true,
+      "status": "FINALIZED",
+      "success": true,
+      "error": null,
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+      "execution_mode": "NORMAL",
+      "consensus_result": 6,
+      "round": "0",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    }
+  ]
+}

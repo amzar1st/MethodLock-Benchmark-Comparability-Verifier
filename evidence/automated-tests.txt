@@ -1,0 +1,75 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> methodlock@1.0.0 test
+> node --test tests/*.test.mjs && python -m pytest tests -v
+
+✔ contract reads explicitly select finalized state with SDK-supported option (1.732865ms)
+✔ session signer can connect and is cleared by disconnect (35.814193ms)
+✔ accepted remains pending until finalized (1.419935ms)
+✔ legacy finalized receipt success (0.223708ms)
+✔ finalized revert is failure (0.830564ms)
+✔ v1 SDK execution result (0.185662ms)
+✔ missing execution receipt does not claim success (0.273021ms)
+✔ no majority and timeouts fail (0.190479ms)
+✔ tracks pending to final execution (0.462893ms)
+✔ RPC failure retains hash and resumes polling (0.351632ms)
+✔ tracking timeout is resumable, never a false success (0.466937ms)
+✔ ranking excludes unfinished, deviating and other protocols (0.447093ms)
+✔ untrusted report HTML is escaped (0.369196ms)
+✔ newly locked protocol is discoverable before first submission (0.453073ms)
+✔ bounded recent protocol discovery retains older referenced IDs (0.415696ms)
+✔ legacy rollback reason is preserved (0.191134ms)
+✔ finalized rejected proposal never counts as success despite leader SUCCESS (0.294747ms)
+✔ missing consensus result remains unverified (0.211618ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 644.782899
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.2.0, pluggy-1.7.0 -- /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/sites/methodlock
+configfile: pytest.ini
+plugins: genlayer-test-0.29.2, anyio-4.14.2
+collecting ... collected 25 items
+
+tests/test_contract.py::test_full_lifecycle PASSED                       [  4%]
+tests/test_contract.py::test_commitments_and_immutability PASSED         [  8%]
+tests/test_contract.py::test_five_cases[0-COMPARABLE] PASSED             [ 12%]
+tests/test_contract.py::test_five_cases[1-PROTOCOL_DEVIATION] PASSED     [ 16%]
+tests/test_contract.py::test_five_cases[2-PROTOCOL_DEVIATION] PASSED     [ 20%]
+tests/test_contract.py::test_five_cases[3-INSUFFICIENT_EVIDENCE] PASSED  [ 24%]
+tests/test_contract.py::test_five_cases[4-INSUFFICIENT_EVIDENCE] PASSED  [ 28%]
+tests/test_contract.py::test_invalid_protocol[batch_size-True] PASSED    [ 32%]
+tests/test_contract.py::test_invalid_protocol[min_quality_bps-10001] PASSED [ 36%]
+tests/test_contract.py::test_invalid_protocol[sample_tolerance-1000] PASSED [ 40%]
+tests/test_contract.py::test_invalid_protocol[timing_scope-] PASSED      [ 44%]
+tests/test_contract.py::test_invalid_disclosures_deviate[batch_size-True] PASSED [ 48%]
+tests/test_contract.py::test_invalid_disclosures_deviate[latency_us-0] PASSED [ 52%]
+tests/test_contract.py::test_invalid_disclosures_deviate[quality_bps-10001] PASSED [ 56%]
+tests/test_contract.py::test_invalid_disclosures_deviate[dataset_version-2] PASSED [ 60%]
+tests/test_contract.py::test_missing_disclosure_unknown PASSED           [ 64%]
+tests/test_contract.py::test_citation_fabrication_rejected PASSED        [ 68%]
+tests/test_contract.py::test_no_early_finalization PASSED                [ 72%]
+tests/test_contract.py::test_page_bounds[0-1] PASSED                     [ 76%]
+tests/test_contract.py::test_page_bounds[1-21] PASSED                    [ 80%]
+tests/test_contract.py::test_page_bounds[1-0] PASSED                     [ 84%]
+tests/test_contract.py::test_missing_protocol PASSED                     [ 88%]
+tests/test_contract.py::test_duplicate_evidence PASSED                   [ 92%]
+tests/test_contract.py::test_validator_independent_disagreement PASSED   [ 96%]
+tests/test_contract.py::test_reason_wording_does_not_change_consensus PASSED [100%]
+
+=============================== warnings summary ===============================
+../../../opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14
+  /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14: PytestRemovedIn10Warning: _pytest.python.CallSpec2 has been renamed to CallSpec.
+  The CallSpec2 alias will be removed in pytest 10.
+  Update imports to use CallSpec instead.
+  See https://docs.pytest.org/en/stable/deprecations.html#callspec2-renamed
+    from _pytest.python import CallSpec2
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 25 passed, 1 warning in 0.92s =========================
