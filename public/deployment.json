@@ -1,0 +1,11 @@
+{
+  "name":"MethodLock",
+  "network":"GenLayer Studionet",
+  "chainId":61999,
+  "rpc":"https://studio.genlayer.com/api",
+  "studio":"https://studio.genlayer.com",
+  "explorer":"https://explorer-studio.genlayer.com",
+  "address":"0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+  "deploymentTransaction":"0x556934f2d87c6d14af5e530b9cbd172bf0b018d5ed97ae0a58f7cd9fff4f98b5",
+  "deployer":"0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C"
+}

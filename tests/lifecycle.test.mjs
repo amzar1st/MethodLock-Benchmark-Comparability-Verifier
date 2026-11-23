@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {transactionState,trackTransaction,rankRuns,eligible,escapeHtml} from '../src/lifecycle.js';
+test('accepted remains pending until finalized',()=>assert.equal(transactionState({statusName:'ACCEPTED'}).terminal,false));
+test('legacy finalized receipt success',()=>assert.equal(transactionState({status:7,consensus_data:{leader_receipt:[{execution_result:'SUCCESS'}]}}).success,true));
+test('finalized revert is failure',()=>assert.deepEqual(transactionState({statusName:'FINALIZED',consensus_data:{leader_receipt:[{execution_result:'ERROR',error:'Assessment required'}]}}),{status:'FINALIZED',terminal:true,success:false,error:'Assessment required'}));
+test('v1 SDK execution result',()=>assert.equal(transactionState({statusName:'FINALIZED',txExecutionResultName:'FINISHED_WITH_RETURN'}).success,true));
+test('missing execution receipt does not claim success',()=>assert.equal(transactionState({statusName:'FINALIZED'}).success,false));
+test('no majority and timeouts fail',()=>{for(const status of ['UNDETERMINED','CANCELED','VALIDATORS_TIMEOUT','LEADER_TIMEOUT'])assert.equal(transactionState({status}).terminal,true);});
+test('tracks pending to final execution',async()=>{let n=0;const states=[];const client={getTransaction:async()=>++n===1?{statusName:'PENDING'}:{statusName:'FINALIZED',txExecutionResultName:'FINISHED_WITH_RETURN'}};const result=await trackTransaction({client,hash:'0x1',pause:async()=>{},onUpdate:s=>states.push(s.status)});assert.equal(result.success,true);assert.deepEqual(states,['PENDING','FINALIZED']);});
+test('RPC failure retains hash and resumes polling',async()=>{let n=0;const client={getTransaction:async()=>{if(++n===1)throw Error('RPC unavailable');return {status:7,consensus_data:{leader_receipt:[{execution_result:'SUCCESS'}]}};}};assert.equal((await trackTransaction({client,hash:'0x1',pause:async()=>{},onUpdate:()=>{}})).success,true);});
+test('tracking timeout is resumable, never a false success',async()=>assert.equal((await trackTransaction({client:{getTransaction:async()=>({status:'PENDING'})},hash:'0x1',attempts:2,pause:async()=>{},onUpdate:()=>{}})).terminal,false));
+test('ranking excludes unfinished, deviating and other protocols',()=>{const run=(id,phase,outcome,latency_us,protocol_id='1')=>({id,phase,outcome,protocol_id,run:{disclosures:{latency_us}}});const runs=[run('1','ASSESSED','COMPARABLE',1),run('2','FINALIZED','PROTOCOL_DEVIATION',2),run('3','FINALIZED','COMPARABLE',10),run('4','FINALIZED','COMPARABLE',5),run('5','FINALIZED','COMPARABLE',1,'2')];assert.deepEqual(rankRuns(runs,'1').map(r=>r.id),['4','3']);assert.equal(eligible(runs[0]),false);});
+test('untrusted report HTML is escaped',()=>assert.equal(escapeHtml('<img src=x onerror="bad">'), '&lt;img src=x onerror=&quot;bad&quot;&gt;'));

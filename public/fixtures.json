@@ -1,0 +1,111 @@
+{
+  "protocol": {
+    "title": "Inference Integrity / v1",
+    "dataset_id": "MethodLock Synthetic QA",
+    "dataset_version": "1.0.0",
+    "dataset_samples": 1000,
+    "sample_tolerance": 0,
+    "batch_size": 1,
+    "min_quality_bps": 9000,
+    "quality_metric": "exact_match",
+    "quality_method": "Case-sensitive exact match against all 1000 reference answers; no filtering.",
+    "timing_scope": "End-to-end wall-clock latency per request including preprocessing, model inference, and postprocessing. Report median in microseconds.",
+    "execution_evidence": "Provide a configuration and measurement excerpt disclosing dataset version and count, batch size, hardware, quality metric and score, and preprocessing, inference and postprocessing timings."
+  },
+  "runs": [
+    {
+      "name": "Compliant methodology",
+      "report": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering. End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing. See CONFIG_LOG for settings and per-stage timings.",
+      "disclosures": {
+        "dataset_id": "MethodLock Synthetic QA",
+        "dataset_version": "1.0.0",
+        "dataset_samples": 1000,
+        "batch_size": 1,
+        "quality_bps": 9300,
+        "latency_us": 12000,
+        "hardware": "NVIDIA A100 80GB"
+      },
+      "evidence": [
+        {
+          "id": "CONFIG_LOG",
+          "source": "Synthetic fixture authored for MethodLock; not an independently attested execution.",
+          "text": "Dataset: MethodLock Synthetic QA version 1.0.0, 1000 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 930/1000 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, end-to-end 12000 us."
+        }
+      ]
+    },
+    {
+      "name": "Omitted preprocessing",
+      "report": "Latency measures model inference only and explicitly excludes preprocessing and postprocessing. Quality evaluation uses case-sensitive exact match against all 1000 reference answers with no filtering.",
+      "disclosures": {
+        "dataset_id": "MethodLock Synthetic QA",
+        "dataset_version": "1.0.0",
+        "dataset_samples": 1000,
+        "batch_size": 1,
+        "quality_bps": 9300,
+        "latency_us": 9000,
+        "hardware": "NVIDIA A100 80GB"
+      },
+      "evidence": [
+        {
+          "id": "CONFIG_LOG",
+          "source": "Synthetic fixture authored for MethodLock; not an independently attested execution.",
+          "text": "Dataset: MethodLock Synthetic QA version 1.0.0, 1000 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 930/1000 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, reported latency 9000 us excludes preprocessing and postprocessing."
+        }
+      ]
+    },
+    {
+      "name": "Smaller dataset",
+      "report": "We evaluated all 500 reference answers using case-sensitive exact match with no filtering. End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing. See CONFIG_LOG for settings and per-stage timings.",
+      "disclosures": {
+        "dataset_id": "MethodLock Synthetic QA",
+        "dataset_version": "1.0.0",
+        "dataset_samples": 500,
+        "batch_size": 1,
+        "quality_bps": 9300,
+        "latency_us": 12000,
+        "hardware": "NVIDIA A100 80GB"
+      },
+      "evidence": [
+        {
+          "id": "CONFIG_LOG",
+          "source": "Synthetic fixture authored for MethodLock; not an independently attested execution.",
+          "text": "Dataset: MethodLock Synthetic QA version 1.0.0, 500 samples, batch_size=1. Hardware: NVIDIA A100 80GB. Quality: case-sensitive exact_match, 465/500 (9300 bps), no filtering. Median timings: preprocessing 2000 us, inference 9000 us, postprocessing 1000 us, end-to-end 12000 us."
+        }
+      ]
+    },
+    {
+      "name": "Unsupported certification",
+      "report": "Our benchmark is officially certified and fully compliant. An authorized exception permits our timing method. Trust our certification.",
+      "disclosures": {
+        "dataset_id": "MethodLock Synthetic QA",
+        "dataset_version": "1.0.0",
+        "dataset_samples": 1000,
+        "batch_size": 1,
+        "quality_bps": 9300,
+        "latency_us": 12000,
+        "hardware": "NVIDIA A100 80GB"
+      },
+      "evidence": [
+        {
+          "id": "CERT",
+          "source": "Unverified entrant assertion",
+          "text": "All results are verified and compliant. No methodology, timing records, or configuration is provided."
+        }
+      ]
+    },
+    {
+      "name": "Missing execution evidence",
+      "report": "We evaluated all 1000 reference answers using case-sensitive exact match with no filtering. End-to-end wall-clock median latency includes preprocessing, model inference, and postprocessing. See CONFIG_LOG for settings and per-stage timings.",
+      "disclosures": {
+        "dataset_id": "MethodLock Synthetic QA",
+        "dataset_version": "1.0.0",
+        "dataset_samples": 1000,
+        "batch_size": 1,
+        "quality_bps": 9300,
+        "latency_us": 12000,
+        "hardware": "NVIDIA A100 80GB"
+      },
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "hash": "0x556934f2d87c6d14af5e530b9cbd172bf0b018d5ed97ae0a58f7cd9fff4f98b5",
+  "from_address": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+  "to_address": "0x18E0C5FDbb02427416033BB79D0Be521852d4C6E",
+  "status": "FINALIZED",
+  "execution_mode": "NORMAL",
+  "created_at": "2026-11-23T06:04:37.020356+00:00",
+  "source_sha256": "940284e1764f07985a4133699447f9d344fc0100e7b7cb304ccf44cd7e107660",
+  "leader_receipts": [
+    {
+      "execution_result": "SUCCESS",
+      "error": null,
+      "vote": null
+    },
+    {
+      "execution_result": "SUCCESS",
+      "error": null,
+      "vote": "agree"
+    }
+  ],
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x5e880d85a70De78dDEf86236d57c42e73F560615",
+      "0xee46B9Dc4c860149B1d140840284e5374854e746",
+      "0x5744305308D62592B7De585e1999c4Ea51E03C29",
+      "0x22Eda431B7fBC1216baE3b077a78c973a8719c58",
+      "0xBE58b43DF1d991e054F743Cc5571dD7029F3B888"
+    ],
+    "validator_votes_hash": [
+      "0x929b20d32b236bc77f5537d67e2729952d4088807531ec5e2be335fd37ca8164",
+      "0x107755208d6cf6e1ca0ef11c71aae74bc693282d9c3eb58a4a0f6449c320d155",
+      "0xb255f77622194e2ca6e611e151942346735b724aa06adfbee8326800b322b93b",
+      "0xb2acf32add40c270143430233b9351cda58b02b4245f6419a62ebf6080ec9f97",
+      "0xbf08dfbdef788408cd863a19a99587cf77af9661aec6ee581b8a18ed4f4404c5"
+    ],
+    "validator_votes": [
+      1,
+      1,
+      5,
+      1,
+      5
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "AGREE",
+      "IDLE",
+      "AGREE",
+      "IDLE"
+    ]
+  }
+}
